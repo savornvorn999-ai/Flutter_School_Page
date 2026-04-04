@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/pn_logo.dart';
 import 'login_page.dart';
 
 class StartupPage extends StatelessWidget {
@@ -19,7 +18,15 @@ class StartupPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const Spacer(flex: 4),
-                  const Center(child: PnLogo(size: 160)),
+                  Center(
+                    child: Image.asset(
+                      'assets/images.png',
+                      key: const ValueKey('startupLogo'),
+                      width: 160,
+                      height: 160,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                   const Spacer(flex: 5),
                   ElevatedButton(
                     key: const ValueKey('startButton'),

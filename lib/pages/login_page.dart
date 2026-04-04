@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../app_theme.dart';
-import '../widgets/pn_logo.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -31,7 +30,15 @@ class _LoginPageState extends State<LoginPage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const SizedBox(height: 12),
-                  const Center(child: PnLogo(size: 136)),
+                  Center(
+                    child: Image.asset(
+                      'assets/images.png',
+                      key: const ValueKey('loginLogo'),
+                      width: 136,
+                      height: 136,
+                      fit: BoxFit.contain,
+                    ),
+                  ),
                   const SizedBox(height: 30),
                   const TextField(
                     key: ValueKey('usernameField'),
